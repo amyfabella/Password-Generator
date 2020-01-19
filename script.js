@@ -16,12 +16,6 @@ var randomFunc = {
     upper: getRandomUpper,
 }
 
-//Password Length: 8-128 Characters
-for (var i=0; i < 128; i++){
-    var random = Math.floor(Math.random() * 128) + 8;
-    length = random + length;
-}
-
 //Functions (from https://www.youtube.com/watch?v=duNmhKgtcsI)
 function getRandomSymbol() {
     var symbols = '!@#$%^&*(){}[]=<>/,.';
@@ -89,7 +83,7 @@ generate.addEventListener("click", () => {
 })
 
 //BONUS: copy to clipboard
-clipboardEl.addEventListener("click", () => {
+copy.addEventListener("click", () => {
     var textarea = document.createElement("textarea");
     var password = passwordEl.innerText;
 
