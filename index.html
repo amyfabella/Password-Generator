@@ -8,7 +8,7 @@
 
     <title>Password Generator</title>
   </head>
-  
+
   <body>
     <header>
       <h1>Password Generator</h1>
@@ -25,7 +25,7 @@
             <!-- User is prompted to select character types -->
             <!-- from https://usefulangle.com/post/234/javascript-handling-checkbox -->
               <div class = "checkbox"> 
-                <input type="checkbox" class="check" id="length"><label>8-128 Characters</label>
+                <input type="number" class="check" id="length" min='8' max='128' value='8'><label>Password Length</label>
                 
                 <input type="checkbox" class="check" id="symbols"><label>Special Characters</label>
                 
