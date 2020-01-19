@@ -5,30 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style.css" />
+
     <title>Password Generator</title>
   </head>
+  
   <body>
     <header>
       <h1>Password Generator</h1>
     </header>
+
     <div class = "container">
+
         <div class = "generate">
             <h2>Generate a Password</h2>
         </div>
+
         <div class = "password">
-            <textarea
+            <form>
+            <!-- User is prompted to select character types -->
+            <!-- from https://usefulangle.com/post/234/javascript-handling-checkbox -->
+              <div class = "checkbox"> 
+                <input type="checkbox" class="check" id="length"><label>8-128 Characters</label>
+                
+                <input type="checkbox" class="check" id="symbols"><label>Special Characters</label>
+                
+                <input type="checkbox" class="check" id="numbers"><label>Numbers</label>
+                
+                <input type="checkbox" class="check" id="lower"><label>Lowercase Characters</label>
+
+                <input type="checkbox" class="check" id="upper"><label>Uppercase Characters</label>
+              </div>
+            </form>
+        
+          <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
         </div>
+
         <div class = "buttons">
             <button id="generate">Generate Password</button>
             <button id="copy">
               Copy to Clipboard
             </button>
         </div>
+
     </div>
 
     <script src="./script.js"></script>
